@@ -1,0 +1,16 @@
+/*Git commands*/
+
+git config --global user.email "harikumarmgp@gmail.com"
+git config --global user.name "HarikumarG"
+
+
+git init
+git add .
+git add .gitignore
+git commit -m "First commit"
+git remote add origin https://github.com/HarikumarG/Algorithms.git
+git push origin master
+
+git pull origin master --allow-unrelated-histories
+git clone <url>
+
