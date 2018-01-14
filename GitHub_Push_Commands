@@ -1,5 +1,8 @@
 /*Git commands*/
 
+//Incase to shift account from one to another 
+control panel > user accounts > credential manager > Windows credentials > Generic credentials
+
 git config --global user.email "harikumarmgp@gmail.com"
 git config --global user.name "HarikumarG"
 
@@ -12,5 +15,5 @@ git remote add origin https://github.com/HarikumarG/Algorithms.git
 git push origin master
 
 git pull origin master --allow-unrelated-histories
-git clone <url>
+git clone <urlgi>
 
