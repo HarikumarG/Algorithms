@@ -51,10 +51,6 @@ struct node* reverse(struct node *head,int k)
 int main()
 {
 	struct node *head=NULL;
-	push(&head,9);
-	push(&head,8);
-	push(&head,7);
-	push(&head,6);
 	push(&head,5);
 	push(&head,4);
 	push(&head,3);

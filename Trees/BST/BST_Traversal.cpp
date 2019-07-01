@@ -1,12 +1,11 @@
-#include<iostream>
-#include<stdlib.h>
+#include<bits/stdc++.h>
 using namespace std;
 struct node
 {
 	int data;
 	struct node *left,*right;
 };
-void inorder(struct node *root)
+void inorder(node *root)
 {
 	if(root!=NULL)
 	{
@@ -15,69 +14,56 @@ void inorder(struct node *root)
 		inorder(root->right);
 	}
 }
-void preorder(struct node *root)
+void preorder(node *root)
 {
 	if(root!=NULL)
 	{
 		cout<<root->data<<" ";
 		preorder(root->left);
-		preorder(root->right);
+		preorder(root->right);	
 	}
 }
-void postorder(struct node *root)
+void postorder(node *root)
 {
 	if(root!=NULL)
 	{
 		postorder(root->left);
-		postorder(root->right);
+		postorder(root->right);	
 		cout<<root->data<<" ";
 	}
 }
-struct node *newnode(int key)
+node *newnode(int key)
 {
 	struct node *temp=(struct node *)malloc(sizeof(struct node));
+	temp->left=temp->right=NULL;
 	temp->data=key;
-	temp->left=NULL;
-	temp->right=NULL;
 	return temp;
 }
-struct node *insert(struct node *node_n,int k)
+node *insert(node *root,int key)
 {
-	if(node_n==NULL)
-	{
-		return newnode(k);
-	}
-	if(k<node_n->data)
-	{
-		node_n->left=insert(node_n->left,k);
-	}
-	else if(k>node_n->data)
-	{
-		node_n->right=insert(node_n->right,k);
-	}
-	return node_n;
+	if(root==NULL)
+		return newnode(key);
+	else if(root->data>key)
+		root->left=insert(root->left,key);
+	else if(root->data<key)
+		root->right=insert(root->right,key);
+	return root;
 }
 int main()
 {
 	struct node *root=NULL;
-	root=insert(root, 50);
-	insert(root, 40);
-    insert(root, 30);
-    insert(root, 20);
-    insert(root, 45);
-    insert(root, 25);
-    insert(root, 35);
-    insert(root, 32);
-    insert(root, 60);
-    insert(root, 70);
-    insert(root, 65);
-    insert(root, 90);
-    insert(root, 80);
-    cout<<"\nPrinting in inorder traversal";
+	root=insert(root,50);
+	insert(root, 30); 
+    insert(root, 20); 
+    insert(root, 40); 
+    insert(root, 70); 
+    insert(root, 60); 
+    insert(root, 80); 
+    cout<<"In order\n";
     inorder(root);
-    cout<<"\nPrinting in preorder traversal";
+    cout<<"\nPre order\n";
     preorder(root);
-    cout<<"\nPrinting in postorder traversal";
+    cout<<"\nPost order\n";
     postorder(root);
     return 0;
 }

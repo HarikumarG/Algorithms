@@ -1,23 +1,37 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-void duplicate(int arr[],int n)
+ 
+// function to find and print duplicates
+void printDuplicates(int arr[], int n)
 {
-	int i;
-	for(i=0;i<n;i++)
-	{
-		int index=arr[i]%n;
-		arr[index]=arr[index]+n;
-	}
-	for(i=0;i<n;i++)
-	{
-		if((arr[i]/n)>1)
-			cout<<i<<" ";
-	}
+    // unordered_map to store frequencies
+    map<int, int> freq;
+    for (int i=0; i<n; i++)
+        freq[arr[i]]++;
+ 
+    bool dup = false;
+    map<int, int>:: iterator itr;
+    for (itr=freq.begin(); itr!=freq.end(); itr++)
+    {
+        // if frequency is more than 1
+        // print the element    
+        if (itr->second > 1)
+        {
+            cout << itr->first << " ";
+            dup = true;
+        }
+    }
+ 
+    // no duplicates present
+    if (dup == false)
+        cout << "-1";
 }
+ 
+// Driver program to test above
 int main()
 {
-	int arr[]={1,6,2,3,1,3,6,6,7,2};
-	int n=sizeof(arr)/sizeof(arr[0]);
-	duplicate(arr,n);
-	return 0;
+    int arr[] = {12, 11, 40, 12, 5, 6, 5, 12, 11};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    printDuplicates(arr, n);
+    return 0;
 }

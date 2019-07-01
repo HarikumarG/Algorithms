@@ -1,3 +1,8 @@
+//For array rotation use steps 
+// do k=k%arr.size();
+//1.reverse all numbers
+//2.reverse first k numbers
+//3.reverse k+1 to end numbers
 #include<iostream>
 using namespace std;
 int gcd(int a,int b)
@@ -58,6 +63,7 @@ int rightrotatearray(int arr_r[],int d,int n)
 	{
 		cout<<" "<<arr_r[i];
 	}
+
 
 }
 int main()

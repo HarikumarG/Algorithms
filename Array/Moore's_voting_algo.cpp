@@ -32,7 +32,7 @@ bool ismajority(int a[],int n,int key)
 			count++;
 		}
 	}
-	if(count>n/2)    //to find majority incase of even number eg 8 to find majority n/2 ie 8/2 is 4 then 
+	if(count>=n/2)    //to find majority incase of even number eg 8 to find majority n/2 ie 8/2 is 4 then 
 	{				//that majority element occurrence times will be greater than 4 
 		return 1;   //incase of odd elements eg 7 then 7/2 is 3 then that majority element occurrence 
 	}				//times will be greater than 3 so obivously out of 7 elements minimum 4 times 
@@ -57,7 +57,7 @@ int printmajority(int a[],int n)
 }
 int main()
 {
-	int a[]={1,3,3,1,2};
+	int a[]={1,3,1,3,2,1};
 	int n=sizeof(a)/sizeof(a[0]);
 	printmajority(a,n);
 	return 0;

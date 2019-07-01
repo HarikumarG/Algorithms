@@ -20,7 +20,7 @@ int maxsubsum(int a[],int n)
 }
 int main()
 {
-	int a[]={-2, -3, 4, -1, -2, 1, 5, -3};
+	int a[]={4,-2,-4,3,6};
 	int n=sizeof(a)/sizeof(a[0]);
 	int maxsum=maxsubsum(a,n);
 	cout<<"Maximum sum :"<<maxsum;

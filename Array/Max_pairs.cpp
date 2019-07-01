@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+/*#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -23,4 +23,27 @@ int main()
             cout<<count;   
     return 0;
 
+}*/
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n=6,sum,max=-1,m,y;
+    int arr[]={1, 4, 3, 3, 5, 1};
+    for(int i=0;i<n-1;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            sum = arr[i]+arr[j];
+            if(sum>=max)
+            {
+                m=arr[i];
+                y=arr[j];
+                max=sum;
+            }
+        }
+    }
+    cout<<m<<","<<y;
+    cout<<"\n"<<max;
+    return 0;
 }

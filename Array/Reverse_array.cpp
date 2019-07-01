@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-int  a[5]={1,2,3,4,5};
 //Recursive method 
 int reverse(int arr[],int start,int end)
 {
@@ -14,6 +13,7 @@ int reverse(int arr[],int start,int end)
 }
 int main()
 {
+	int  a[5]={1,2,3,4,5};
 	int start=0,n=5,end;
 	end=n-1;
 	reverse(a,start,end);
