@@ -2,5 +2,9 @@
 using namespace std;
 int main()
 {
-    return 0;
+	int x=4;
+	int y = x++;
+	int z=++x;
+	cout<<x<<y<<z;
+	return 0;
 }
