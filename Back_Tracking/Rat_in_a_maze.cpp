@@ -45,7 +45,7 @@ int solvemazeutilcount(int maze[n][n],int x,int y,int sol[n][n])
 	{
 		sol[x][y]=1;
 		c++;
-		printsol(sol);
+		//printsol(sol);
 		return 1;
 	}
 	if(issafe(maze,x,y)==true)
@@ -85,9 +85,9 @@ void solvemaze(int maze[n][n])
 int main()
 {
 	int maze[n][n] =  
-	{ 	{1, 0, 0, 0}, 
+	{ 	{1, 1, 1, 1}, 
         {1, 1, 1, 1}, 
-        {0, 1, 0, 1}, 
+        {1, 1, 1, 1}, 
         {1, 1, 1, 1} 
     }; 
     solvemaze(maze);

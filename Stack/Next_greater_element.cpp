@@ -27,7 +27,7 @@ void printNGE(int arr[],int n)
 }
 int main()
 {
-  int arr[] = {11, 13, 21, 3};
+  int arr[] = {11, 21, 13, 3};
   int n = sizeof(arr) / sizeof(arr[0]);
   printNGE(arr, n);
   return 0;

@@ -2,8 +2,9 @@
 using namespace std;
 int main()
 {
-	int n = 2;
-	n = n << 1;
-	cout<<n;
+	int i = 1;
+	int j = 2;
+	cout<<++i + i++ + ++i;
 	return 0;
 }
+

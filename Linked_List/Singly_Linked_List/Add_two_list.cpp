@@ -84,22 +84,13 @@ void push(Node **head_r,int d)
 }
 int main()
 {
-    Node *head = newNode(1);
+    Node *head = newNode(9);
     head->next = newNode(9);
-    head->next->next = newNode(9);
-    head->next->next->next = newNode(9);
-    head->next->next->next->next= newNode(9);
- 
+    head->next->next = newNode(1);
     cout<<"First List is ";
     printList(head);
  	
- 	Node *head1 = newNode(2);
-    head1->next = newNode(3);
-    head1->next->next = newNode(5);
-    head1->next->next->next = newNode(4);
-    head1->next->next->next->next= newNode(9);
-    head1->next->next->next->next->next= newNode(6);
-    head1->next->next->next->next->next->next= newNode(2);
+ 	Node *head1 = newNode(1);
     cout<<"Second List is ";
     printList(head1);
 
