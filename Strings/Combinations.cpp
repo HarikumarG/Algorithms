@@ -58,15 +58,11 @@ void combinationUtil(char arr[], char data[],
 						end, index+1, r,c); 
 	} 
 } 
-
-// Driver code 
 int main() 
 { 
 	char arr[] = {'A','B','C','D','E','F','G','H','I','J'}; 
 	int r = 7; 
 	int n = sizeof(arr)/sizeof(arr[0]); 
 	printCombination(arr, n, r); 
-} 
-
-// This code is contributed by rathbhupendra 
+}
 

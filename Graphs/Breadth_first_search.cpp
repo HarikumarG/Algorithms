@@ -88,6 +88,6 @@ int main()
     addEdge(adj1, 1, 4); 
     addEdge(adj1, 2, 3); 
     addEdge(adj1, 3, 4); 
-    BFS_unconnected(adj1,4);
+    //BFS_unconnected(adj1,4);
 	return 0;
 }

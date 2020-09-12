@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-int a[]={10, 7, 8, 9, 1, 5};
+int a[]={2,0,2,1,1,0};
+int len = sizeof(a)/sizeof(a[0]);
 int partition(int low,int high)
 {
 	int pivot,i,j,temp;
@@ -9,9 +10,11 @@ int partition(int low,int high)
 	pivot=a[low];
 	while(i<j)       //The major rule of quick sort is that the elements to the left of the pivot
 	{				//should be lesser than the pivot and the elements to the right of the pivot
-		while(a[i]<=pivot)  //should be greater than the pivot
+		while(i<len && a[i]<=pivot)  //should be greater than the pivot
+		{
 			i++;
-		while(a[j]>pivot)
+		}
+		while(j >= 0 && a[j]>pivot)
 			j--;
 		if(i<j)         //swap if the low index value is lower than the high index value
 		{
@@ -39,15 +42,18 @@ int quicksort(int low,int high)
 }
 int printarray(int n)
 {
+	cout<<endl;
 	for(int i=0;i<n;i++)
 	{
-		cout<<" "<<a[i];
+		cout<<a[i]<<" ";
 	}
+	cout<<endl;
 	return 0;
 }
 int main()
 {
 	int n=sizeof(a)/sizeof(a[0]);
+	cout<<n;
 	quicksort(0,n-1);
 	printarray(n);
 	return 0;

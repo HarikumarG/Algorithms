@@ -26,7 +26,7 @@ void reverse(struct node *head_r)
 		cout<<trav->data<<" ";
 		trav=trav->next;
 	}
-	
+	cout<<endl;	
 }
 void push(struct node **head_p,int d)
 {

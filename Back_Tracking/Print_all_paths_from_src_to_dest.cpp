@@ -13,6 +13,7 @@ void possiblepathutil(vector<int>adj[],int u,int dest,bool visited[],int path[],
 	{
 		for(int i=0;i<pathind;i++)
 		{
+			cout<<"uh";
 			cout<<path[i]<<" ";
 		}
 		cout<<"\n";
@@ -42,13 +43,15 @@ void possiblepath(vector<int>adj[],int src,int dest,int v)
 }
 int main()
 {
-	int v=5;
+	int v=3;
 	vector<int>adj[v];
    	addEdge(adj,0, 1);
+//	addEdge(adj,1,2);
+//	addEdge(adj,0,2);
     addEdge(adj,0, 3);  
-    addEdge(adj,1, 2); 
-    addEdge(adj,2, 4); 
-    addEdge(adj,1, 4); 
+  addEdge(adj,1, 2); 
+addEdge(adj,2, 4); 
+ addEdge(adj,1, 4); 
     addEdge(adj,1, 3); 
     int src=0,dest=3;
     possiblepath(adj,src,dest,v);

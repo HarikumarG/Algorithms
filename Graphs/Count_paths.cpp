@@ -27,9 +27,9 @@ void CountpathsUtil(vector<int>adj[],int u,int d,bool visited[],int &pathcount,v
 		{
 			if(!visited[*i])
 			{
-				CountpathsUtil(adj,*i,d,visited,pathcount,path);	
-			}	
-		}	
+				CountpathsUtil(adj,*i,d,visited,pathcount,path);
+			}
+		}
 	}
 	visited[u] = false;
 	path.pop_back();
@@ -46,14 +46,15 @@ int Countpaths(vector<int>adj[],int s,int d)
 int main()
 {
 	vector<int>adj[V];
-	addEdge(adj,0, 1); 
-    addEdge(adj,0, 2); 
-    addEdge(adj,0, 3); 
-    addEdge(adj,2, 0); 
-    addEdge(adj,2, 1); 
-    addEdge(adj,1, 3); 
+	addEdge(adj,0, 1);
+    addEdge(adj,0, 2);
+    addEdge(adj,0, 3);
+    addEdge(adj,2, 0);
+    addEdge(adj,2, 1);
+    addEdge(adj,1, 3);
     int s = 2,d = 3;
     cout<<"All the paths are\n";
-    cout<<"NO.of.paths "<<Countpaths(adj,s,d);
+    int c = Countpaths(adj,s,d);
+    cout<<"NO.of.paths "<<c;
     return 0;
 }
