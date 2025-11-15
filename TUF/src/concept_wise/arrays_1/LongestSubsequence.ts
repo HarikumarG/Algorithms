@@ -1,5 +1,6 @@
 // Given an array nums of n integers.
 // Return the length of the longest sequence of consecutive integers. The integers in this sequence can appear in any order.
+// eg. [0, -1, 1, 2, -2, 3, -3, 4, 2, 1, -1, 5] = 9
 
 export default class LongestSubsequence {
    
