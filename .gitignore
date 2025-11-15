@@ -6,3 +6,5 @@
 !/**/
 !*.*
 a.out
+TUF/dist/**/*
+TUF/node_modules/**/*
