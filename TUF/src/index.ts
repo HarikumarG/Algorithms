@@ -1,10 +1,11 @@
 import Kadane from "./concept_wise/arrays_1/KadaneAlgo";
 import LongestSubsequence from "./concept_wise/arrays_1/LongestSubsequence";
 import SpiralOrder from "./concept_wise/arrays_1/SpiralOrder";
+import MaxProductSubArray from "./concept_wise/arrays_4/MaxProductSubarray";
 
 function main(): void {
-   const object = new Kadane();;
-   const result = object.getLargestSum([-12, -3, -7, -2, -10, -4]);
+   const object = new MaxProductSubArray();;
+   const result = object.getLargestProduct([1, -2, 3, 4, -4, -3]);
    console.log(result);
 };
 
