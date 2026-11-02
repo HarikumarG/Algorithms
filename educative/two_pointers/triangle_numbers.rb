@@ -32,7 +32,7 @@ class TriangleNumber
       right = k-1
 
       while left < right
-        if is_triangle?(@sorted[left], @sorted[right], @sorted[k])
+        if @sorted[left] + @sorted[right] > @sorted[k]
           # if its count only then we can do # No 3rd loop needed at all! total += (right - left)
           (left...right).each do |idx|
             @optimized_result << [@sorted[idx], @sorted[right], @sorted[k]]
